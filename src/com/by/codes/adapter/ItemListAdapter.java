@@ -105,6 +105,7 @@ public abstract class ItemListAdapter<I> extends BaseAdapter {
 		if (view == null) {
 			I item = getData(position);
 			view = creatView(position, item);
+			view.setTag(view);
 		} else {
 			I item = getData(position);
 			view = updateView(position, view, item);
